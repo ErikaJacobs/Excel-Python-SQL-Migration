@@ -33,8 +33,8 @@ This project features the migration of hundreds of Excel files with a similar fo
      * [```sql_transform.py```](https://github.com/ErikaJacobs/Excel-Python-SQL-Migration/blob/master/modules/sql_transform.py) - Runs code to clean data in SQL Server
      * [```warning.py```](https://github.com/ErikaJacobs/Excel-Python-SQL-Migration/blob/master/modules/warning.py) - Creates warning message for importing all directory Excel files
 * SQL Files
-     * ```SQL_Load.sql``` - Creates final tables in SQL Server
-     * ```SQL_Transform.sql``` - Cleans data in SQL Server
+     * [```SQL_Load.sql```](https://github.com/ErikaJacobs/Excel-Python-SQL-Migration/blob/master/SQL/SQL_Load.sql) - Creates final tables in SQL Server
+     * [```SQL_Transform.sql```](https://github.com/ErikaJacobs/Excel-Python-SQL-Migration/blob/master/SQL/SQL_Transform.sql) - Cleans data in SQL Server
 
 # Sources
 * [Pyodbc](https://github.com/mkleehammer/pyodbc/wiki)
