@@ -1,42 +1,27 @@
-# MAIN APPLIvariable1ION FILE
-# Excel --> Python --> SQL
+# MAIN APPLICATION FILE
+# Excel ---> Python ---> SQL
 
 def run():
     
     # Import Packages
-    import modules.convert_check as m1
-    import modules.convert_no_macro as m2
-    import modules.excel_import as m3
-    import modules.clean as m4
-    import modules.sql_export as m5
-    import modules.sql_transform as m6
-    import modules.sql_load as m7
-    import modules.warning as m8
+    import modules.convert_import as m1
+    import modules.sql as m2
+    import modules.warning as warning
 
-    # Procedure
-    convert = m1.convert_check()
+    # Convert, Import, and Clean
+    c1 = m1.convert_import()
+    c1.check()
     
-    # One or more updated files
-    if len(convert) != 0:
-        m2.convert_all()
-        df = m3.import_some(convert)
-        df = m4.clean_some(df)
-        m5.SQL_Exp_Some(df)
-
-    # Updating all files
+    if len(c1.conv) < 1:
+        warning.window()
     else:
-        m8.warning()
-        m2.convert_all()
-        df = m3.import_all()
-        df = m4.clean_all(df)
-        m5.SQL_Exp_All(df)
-
-    # SQL Queries
-    m6.Transform()
-    m7.Load()
+        c1.convert()
+    
+    c1.import_all()
+    c1.clean()
+    
+    # Output to SQL
+    c2 = m2.sql(c1.df, c1.imp)
+    c2.export()
 
 #%%
-    
-#https://dev.to/codemouse92/dead-simple-python-project-structure-and-imports-38c6
-#https://www.reddit.com/r/learnpython/comments/5oxkfv/python_file_naming_standard/
-# https://www.internalpointers.com/post/modules-and-packages-create-python-project

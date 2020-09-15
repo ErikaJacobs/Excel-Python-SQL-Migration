@@ -5,6 +5,15 @@ USE Database Name;
 IF OBJECT_ID('???.TableName', 'U') IS NOT NULL DROP TABLE [???].[TableName2];
 IF OBJECT_ID('???.TableName', 'U') IS NOT NULL SELECT * INTO [???].[TableName2] FROM ???.TableName;
 
+ALTER TABLE [dbo].[table2] ALTER COLUMN [variable1] VARCHAR(30);
+ALTER TABLE [dbo].[table2] ALTER COLUMN [variable2] VARCHAR(30);
+ALTER TABLE [dbo].[table2] ALTER COLUMN [variable3] VARCHAR(30);
+ALTER TABLE [dbo].[table2] ALTER COLUMN [variable4] VARCHAR(30);
+ALTER TABLE [dbo].[table2] ALTER COLUMN [variable5] VARCHAR(30);
+ALTER TABLE [dbo].[table2] ALTER COLUMN [variable6] VARCHAR(30);
+ALTER TABLE [dbo].[table2] ALTER COLUMN [variable7] VARCHAR(30);
+ALTER TABLE [dbo].[table2] ALTER COLUMN [variable8] VARCHAR(30);
+
 UPDATE [???].[TableName2]
 SET    variable10 = CASE WHEN variable10 = '11' THEN '1'
 			WHEN variable10 = '22' THEN '2'
@@ -98,3 +107,9 @@ SET variable155 = CASE WHEN [variable] = variable153 then 0
 UPDATE [???].[TableName2]
 SET variable156 = CASE WHEN [variable] = variable153 then 0
 				ELSE variable38 + variable64 - variable60 END
+				
+/* Rebuild Indexes */
+
+CREATE INDEX IX_variable1_variable2 ON [dbo].[table2] (variable1, variable2);
+CREATE INDEX IX_variable3_variable4 ON [dbo].[table2] (variable3, variable4);
+CREATE INDEX IX_variable5_variable6 ON [dbo].[table2] (variable5, variable6)
