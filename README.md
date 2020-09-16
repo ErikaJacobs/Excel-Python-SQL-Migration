@@ -40,7 +40,3 @@ This project features the migration of hundreds of Excel files with a similar fo
 * SQL Files
     * [```SQL_Load.sql```](https://github.com/ErikaJacobs/Excel-Python-SQL-Migration/blob/master/SQL/SQL_Load.sql) - Creates final tables in SQL Server
     * [```SQL_Transform.sql```](https://github.com/ErikaJacobs/Excel-Python-SQL-Migration/blob/master/SQL/SQL_Transform.sql) - Cleans data in SQL Server
-
-# Sources
-* [Pyodbc](https://github.com/mkleehammer/pyodbc/wiki)
-
