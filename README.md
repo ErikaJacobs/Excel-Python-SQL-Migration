@@ -19,9 +19,8 @@ This project features the migration of hundreds of Excel files with a similar fo
 * pandas - 0.25.1
 * sqlalchemy - 1.3.9
 
-# Featured Notebooks, Scripts, Analysis, or Deliverables
+# Featured Scripts or Deliverables
 * [```run.py```](https://github.com/ErikaJacobs/Excel-Python-SQL-Migration/blob/master/run.py)
-
 
 # Other Repository Contents
 * Modules
